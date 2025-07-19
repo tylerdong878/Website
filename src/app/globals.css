@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'CFBog';
+  src: url('/fonts/CfBogswaDemoItalic-7Oj2P.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #ffffff;
+  --cyber-blue: #0088cc;
+  --cyber-pink: #ff00ff;
+  --cyber-green: #00ff00;
+  --cyber-orange: #ff6600;
+  --cyber-bg: #0a0a0f;
+  --cyber-dark: #1a1a2e;
+  --font-cfbog: 'CFBog', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-cfbog: var(--font-cfbog);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cyber-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyber-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyber-pink);
+}
+
+/* Selection color */
+::selection {
+  background: var(--cyber-blue);
+  color: var(--cyber-bg);
+}
+
+/* Focus outline */
+*:focus {
+  outline: 2px solid var(--cyber-blue);
+  outline-offset: 2px;
+}

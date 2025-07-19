@@ -51,7 +51,7 @@
 ### 2. Homepage (`/`)
 **Hero Section:**
 - **Avatar:** Professional photo with neon border glow
-- **Name:** "Sandy" with subtle glitch effect
+- **Name:** "Tyler" with subtle glitch effect
 - **Title:** "Computer Engineering & Computer Science"
 - **Subtitle:** Professional tagline about your expertise
 - **CTA Buttons:** "View Projects", "Download Resume", "Get In Touch"
@@ -366,7 +366,7 @@ const NeonGlow = ({ children }: { children: React.ReactNode }) => {
 ```typescript
 // layout.tsx
 export const metadata = {
-  title: 'Sandy - Computer Engineering & Computer Science',
+  title: 'Tyler - Computer Engineering & Computer Science',
   description: 'Professional portfolio showcasing projects and skills',
   keywords: ['computer engineering', 'computer science', 'portfolio', 'projects'],
 };
