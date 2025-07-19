@@ -59,8 +59,7 @@ body {
   color: var(--cyber-bg);
 }
 
-/* Focus outline */
+/* Remove focus outline */
 *:focus {
-  outline: 2px solid var(--cyber-blue);
-  outline-offset: 2px;
+  outline: none !important;
 }
