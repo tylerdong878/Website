@@ -5,17 +5,47 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
+        // Override built-in colors with our custom ones
+        blue: {
+          500: '#0088cc',
+          600: '#006699',
+          400: '#40a0e0',
+          300: '#66b3e6',
+          200: '#8cc6ed',
+          100: '#b3d9f3',
+          50: '#d9ecf9',
+        },
+        pink: {
+          500: '#ff00ff',
+          600: '#cc00cc',
+          400: '#ff40ff',
+        },
+        green: {
+          500: '#00ff00',
+          600: '#00cc00',
+          400: '#40ff40',
+        },
+        orange: {
+          500: '#ff6600',
+          600: '#cc5200',
+          400: '#ff8040',
+        },
+        
         // Luminous cyberpunk colors with glow effects
         'cyber-blue': {
-          DEFAULT: '#00ffff',
-          'glow': '#00ffff',
-          'dim': '#00cccc',
-          'bright': '#40ffff',
-          'atmospheric': 'rgba(0,255,255,0.3)'
+          DEFAULT: '#0088cc',
+          'glow': '#0088cc',
+          'dim': '#006699',
+          'bright': '#40a0e0',
+          'atmospheric': 'rgba(0,136,204,0.3)'
         },
         'cyber-pink': {
           DEFAULT: '#ff00ff',

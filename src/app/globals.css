@@ -11,12 +11,13 @@
 :root {
   --background: #0a0a0f;
   --foreground: #ffffff;
-  --cyber-blue: #0088cc;
+  --cyber-blue: #00ffff;
   --cyber-pink: #ff00ff;
   --cyber-green: #00ff00;
   --cyber-orange: #ff6600;
   --cyber-bg: #0a0a0f;
   --cyber-dark: #1a1a2e;
+  --blue: #0088cc;
   --font-cfbog: 'CFBog', sans-serif;
 }
 

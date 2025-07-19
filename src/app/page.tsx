@@ -16,25 +16,45 @@ export default function Home() {
 
       {/* Floating data nodes */}
       <div className="absolute inset-0">
-        {[...Array(8)].map((_, i) => (
+        {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-cyber-blue rounded-full"
+            className="absolute w-3 h-3 rounded-full relative"
             style={{
-              left: `${20 + (i * 10)}%`,
-              top: `${15 + (i * 8)}%`
+              left: `${Math.random() * 80 + 5}%`,
+              top: `${Math.random() * 70 + 5}%`,
+              background: 'linear-gradient(45deg, #0088cc, #ff00ff)',
+              boxShadow: '0 0 15px rgba(0,136,204,0.8), 0 0 30px rgba(255,0,255,0.6), 0 0 45px rgba(0,136,204,0.4)',
+              filter: 'blur(0.5px)'
             }}
             animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 1, 0.3],
-              scale: [0.5, 1, 0.5]
+              y: [0, -30, 0],
+              x: [0, Math.random() * 20 - 10, 0],
+              opacity: [0.4, 1, 0.4],
+              scale: [0.6, 1.2, 0.6],
+              rotate: [0, 180, 360],
+              boxShadow: [
+                '0 0 15px rgba(0,136,204,0.8), 0 0 30px rgba(255,0,255,0.6), 0 0 45px rgba(0,136,204,0.4)',
+                '0 0 25px rgba(0,136,204,1), 0 0 50px rgba(255,0,255,0.8), 0 0 75px rgba(0,136,204,0.6)',
+                '0 0 15px rgba(0,136,204,0.8), 0 0 30px rgba(255,0,255,0.6), 0 0 45px rgba(0,136,204,0.4)'
+              ]
             }}
             transition={{
-              duration: 3 + i * 0.5,
+              duration: 4 + Math.random() * 2,
               repeat: Infinity,
-              delay: i * 0.3
+              delay: Math.random() * 2,
+              ease: "easeInOut"
             }}
-          />
+          >
+            {/* Inner core */}
+            <div 
+              className="absolute inset-1 rounded-full"
+              style={{
+                background: 'linear-gradient(45deg, #0088cc, #ff00ff)',
+                filter: 'blur(1px)'
+              }}
+            />
+          </motion.div>
         ))}
       </div>
 
@@ -53,7 +73,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-7xl md:text-8xl lg:text-9xl font-normal italic mb-12 relative tracking-[0.075em]"
+          className="text-8xl md:text-8.5xl lg:text-9xl font-normal italic mb-10 relative tracking-[0.075em]"
           style={{ fontFamily: 'var(--font-cfbog), "CFBog", sans-serif' }}
         >
           <span className="relative inline-block">
@@ -71,9 +91,9 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-2xl text-cyber-blue mb-12 font-light"
+          className="text-3xl text-blue-500 mb-12 font-light"
         >
-          Computer Engineering & Computer Science
+          Computer Engineering & Computer Science @ Northeastern University
         </motion.p>
 
         {/* Three Glowing Buttons */}
@@ -90,7 +110,7 @@ export default function Home() {
               boxShadow: "0 0 30px rgba(0,136,204,0.8), 0 0 60px rgba(0,136,204,0.4)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-cyber-bg/50 backdrop-blur-sm border-2 border-cyber-blue rounded-lg text-cyber-blue font-bold text-lg shadow-cyber-glow transition-all duration-300"
+            className="px-8 py-4 bg-cyber-bg/50 backdrop-blur-sm border-2 border-cyber-blue rounded-lg text-blue-500 font-bold text-lg shadow-cyber-glow transition-all duration-300"
           >
             PROJECTS
           </motion.button>
