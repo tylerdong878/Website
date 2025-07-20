@@ -45,12 +45,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--cyber-blue);
+  background: #0088cc;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--cyber-pink);
+  background: #006699;
 }
 
 /* Selection color */
