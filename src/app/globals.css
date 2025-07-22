@@ -45,12 +45,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0088cc;
+  background: #006699;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #006699;
+  background: #0088cc;
 }
 
 /* Selection color */

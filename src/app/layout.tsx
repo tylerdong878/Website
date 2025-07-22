@@ -14,9 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tyler Dong",
-  description: "Professional portfolio showcasing projects and skills in computer engineering and computer science",
-  keywords: ["computer engineering", "computer science", "portfolio", "projects", "tyler"],
+  title: 'Tyler Dong',
+  description: 'Tyler Dong Portfolio',
+  icons: {
+    icon: '/tlogo.jpg',
+  },
 };
 
 export default function RootLayout({
