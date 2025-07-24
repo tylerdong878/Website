@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import SaberText from '../ui/SaberText'
-import ActionButtons from '../ActionButtons'
+import ActionButtons from './ActionButtons'
 
 export default function HeroSection() {
   return (

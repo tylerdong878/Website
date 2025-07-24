@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ image, title, description, notes }: ProjectCardProps) {
   return (
-    <GlowingFrame className="w-full h-full p-4 flex flex-col items-center bg-black/80 rounded-xl" px="px-6" py="py-4">
+    <GlowingFrame className="w-full h-full p-4 flex flex-col items-center bg-black/80 rounded-xl" px="px-5.5" py="py-4">
       <GlowingFrame className="mb-4 w-full h-40 overflow-hidden" px="px-0" py="py-0">
         <Image
           src={image}
