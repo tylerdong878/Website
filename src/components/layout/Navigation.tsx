@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import GlowingFrame from '@/components/GlowingFrame'
+import GlowingFrame from '@/components/ui/GlowingFrame'
 
 interface NavLinkProps {
   href: string

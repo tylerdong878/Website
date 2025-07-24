@@ -4,15 +4,18 @@ import { motion } from 'framer-motion'
 
 interface GlowingFrameProps {
   children: React.ReactNode
+  className?: string
+  px?: string
+  py?: string
 }
 
-export default function GlowingFrame({ children }: GlowingFrameProps) {
+export default function GlowingFrame({ children, className = '', px = 'px-8', py = 'py-4' }: GlowingFrameProps) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, delay: 0.2 }}
-      className="relative px-8 py-4 rounded-2xl"
+      className={`relative rounded-2xl ${px} ${py} ${className}`}
       style={{
         background: 'linear-gradient(-45deg,rgb(47, 186, 255) 0%, #0088cc 50%, #ff00ff 100%)',
         padding: '3px',
@@ -42,7 +45,7 @@ export default function GlowingFrame({ children }: GlowingFrameProps) {
       />
       
       <div 
-        className="bg-cyber-bg/80 backdrop-blur-sm rounded-2xl px-8 py-6 h-full w-full"
+        className={`bg-cyber-bg/80 backdrop-blur-sm rounded-2xl ${px} ${py} h-full w-full`}
         style={{
           background: 'rgba(0,0,0,0.8)',
           backdropFilter: 'blur(10px)'

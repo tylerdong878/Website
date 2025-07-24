@@ -1,14 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import SaberText from './SaberText'
-import ActionButtons from './ActionButtons'
+import SaberText from '../ui/SaberText'
+import ActionButtons from '../ActionButtons'
 
 export default function HeroSection() {
   return (
     <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
       {/* Name with Saber Glow Outline */}
-      <SaberText />
+      <SaberText size="text-9xl" color="#0088cc">Tyler Dong</SaberText>
 
       {/* Description */}
       <motion.p

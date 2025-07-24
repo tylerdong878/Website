@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import GlowingFrame from './GlowingFrame'
+import GlowingFrame from './ui/GlowingFrame'
 
 export default function ActionButtons() {
   return (

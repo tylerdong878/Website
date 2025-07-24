@@ -1,9 +1,9 @@
 'use client'
 
-import FloatingBackground from '@/components/FloatingBackground'
-import MatrixBackground from '@/components/MatrixBackground'
-import HexGrid from '@/components/HexGrid'
-import HeroSection from '@/components/HeroSection'
+import FloatingBackground from '@/components/animations/FloatingBackground'
+import MatrixBackground from '@/components/animations/MatrixBackground'
+import HexGrid from '@/components/animations/HexGrid'
+import HeroSection from '@/components/layout/HeroSection'
 
 export default function Home() {
   return (
