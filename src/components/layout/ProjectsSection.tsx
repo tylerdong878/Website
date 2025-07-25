@@ -50,7 +50,7 @@ export default function ProjectsSection() {
       <ProjectCard
         image="/projects/animago.png"
         title="AnimaGo"
-        description="Augmented reality app that gamifies wildlife discovery and conservation."
+        description="Augmented reality mobile app that gamifies wildlife discovery and conservation."
         notes={["Awarded \"Best Design\" at Civic Tech Hackathon 2025 out of 40 teams."]}
         website="https://www.canva.com/design/DAGf7XUHkDs/W_r-ENJXzuiz1Vz6VgmnYQ/edit"
         devpost="https://devpost.com/software/animago"
