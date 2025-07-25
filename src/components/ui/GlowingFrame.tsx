@@ -7,9 +7,10 @@ interface GlowingFrameProps {
   className?: string
   px?: string
   py?: string
+  glow?: boolean // Optional prop to control glow
 }
 
-export default function GlowingFrame({ children, className = '', px = 'px-8', py = 'py-4' }: GlowingFrameProps) {
+export default function GlowingFrame({ children, className = '', px = 'px-8', py = 'py-4', glow = true }: GlowingFrameProps) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -22,34 +23,32 @@ export default function GlowingFrame({ children, className = '', px = 'px-8', py
         position: 'relative'
       }}
     >
-      {/* Gradient glow overlay */}
+      {glow && (
+        <>
+          {/* Gradient glow overlay */}
+          <div 
+            className="absolute inset-0 rounded-2xl opacity-45"
+            style={{
+              background: 'linear-gradient(-45deg,rgb(47, 186, 255) 0%, #0088cc 50%, #ff00ff 100%)',
+              filter: 'blur(12px)',
+              transform: 'scale(1.03)',
+              zIndex: -1
+            }}
+          />
+          {/* Additional glow layers */}
+          <div 
+            className="absolute inset-0 rounded-2xl opacity-30"
+            style={{
+              background: 'linear-gradient(-45deg,rgb(47, 186, 255) 0%, #0088cc 50%, #ff00ff 100%)',
+              filter: 'blur(18px)',
+              transform: 'scale(1.06)',
+              zIndex: -2
+            }}
+          />
+        </>
+      )}
       <div 
-        className="absolute inset-0 rounded-2xl opacity-45"
-        style={{
-          background: 'linear-gradient(-45deg,rgb(47, 186, 255) 0%, #0088cc 50%, #ff00ff 100%)',
-          filter: 'blur(12px)',
-          transform: 'scale(1.03)',
-          zIndex: -1
-        }}
-      />
-      
-      {/* Additional glow layers */}
-      <div 
-        className="absolute inset-0 rounded-2xl opacity-30"
-        style={{
-          background: 'linear-gradient(-45deg,rgb(47, 186, 255) 0%, #0088cc 50%, #ff00ff 100%)',
-          filter: 'blur(18px)',
-          transform: 'scale(1.06)',
-          zIndex: -2
-        }}
-      />
-      
-      <div 
-        className={`bg-cyber-bg/80 backdrop-blur-sm rounded-2xl ${px} ${py} h-full w-full`}
-        style={{
-          background: 'rgba(0,0,0,0.8)',
-          backdropFilter: 'blur(10px)'
-        }}
+        className={`bg-black/80 backdrop-blur rounded-2xl ${px} ${py} h-full w-full`}
       >
         {children}
       </div>

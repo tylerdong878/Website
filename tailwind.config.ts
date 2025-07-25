@@ -27,6 +27,7 @@ const config: Config = {
           500: '#ff00ff',
           600: '#cc00cc',
           400: '#ff40ff',
+          300: '#e80dfb'
         },
         green: {
           500: '#00ff00',

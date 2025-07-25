@@ -20,8 +20,7 @@ export default function SaberText({
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className={`${size} font-normal italic mb-10 relative tracking-[0.075em] ${className}`}
-      style={{ fontFamily: 'var(--font-cfbog), "CFBog", sans-serif' }}
+      className={`font-cfbog ${size} font-normal italic mb-10 relative tracking-[0.075em] ${className}`}
     >
       <span className="relative inline-block">
         {/* Multiple glow layers for saber effect */}

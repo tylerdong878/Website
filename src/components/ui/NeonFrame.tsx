@@ -7,7 +7,7 @@ interface NeonFrameProps {
 
 export function NeonFrame({ children, className = '' }: NeonFrameProps) {
   return (
-    <div className={`relative w-full h-full flex items-center justify-center ${className}`} style={{ aspectRatio: '1 / 1' }}>
+    <div className={`relative w-full h-full flex items-center justify-center aspect-square ${className}`}>
       <svg
         viewBox="0 0 800 800"
         width="100%"

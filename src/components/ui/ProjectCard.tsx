@@ -1,31 +1,66 @@
 import React from 'react';
 import GlowingFrame from './GlowingFrame';
 import Image from 'next/image';
+import { FaGithub, FaYoutube, FaGlobe } from 'react-icons/fa';
+import { SiDevpost } from 'react-icons/si';
 
 interface ProjectCardProps {
   image: string;
   title: string;
   description: string;
-  notes?: string;
+  notes?: string[];
+  devpost?: string;
+  github?: string;
+  youtube?: string;
+  website?: string;
 }
 
-export function ProjectCard({ image, title, description, notes }: ProjectCardProps) {
+export function ProjectCard({ image, title, description, notes, devpost, github, youtube, website }: ProjectCardProps) {
   return (
-    <GlowingFrame className="w-full h-full p-4 flex flex-col items-center bg-black/80 rounded-xl" px="px-5.5" py="py-4">
-      <GlowingFrame className="mb-4 w-full h-40 overflow-hidden" px="px-0" py="py-0">
+    <GlowingFrame glow={false} className="w-full h-115 p-4 flex flex-col items-center rounded-xl relative z-10" px="px-5.5" py="py-4">
+      <GlowingFrame className="mb-4 w-full h-40 overflow-hidden aspect-[16/9]" px="px-0" py="py-0">
         <Image
           src={image}
           alt={title}
           width={400}
           height={225}
           className="w-full h-full object-cover rounded-2xl"
-          style={{ aspectRatio: '16/9' }}
           loading="lazy"
         />
       </GlowingFrame>
-      <h3 className="text-2xl font-bold text-purple-500 mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>{title}</h3>
-      <p className="text-base text-white/90 mb-2 text-center">{description}</p>
-      {notes && <div className="text-xs text-pink-400 mt-2 italic text-center">{notes}</div>}
+      <h3 className="text-2xl font-bold text-purple-500 mb-2 font-orbitron">{title}</h3>
+      <p className="text-base text-purple-300 mb-2">{description}</p>
+      {notes && notes.length > 0 && (
+        <ul className="text-base text-purple-400 mt-2 list-disc list-inside">
+          {notes.map((note, idx) => (
+            <li key={idx}>{note}</li>
+          ))}
+        </ul>
+      )}
+      {(website || devpost || github || youtube) && (
+        <div className="flex gap-4 mt-4">
+          {website && (
+            <a href={website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-pink-400 transition-colors">
+              <FaGlobe size={30} />
+            </a>
+          )}
+          {devpost && (
+            <a href={devpost} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
+              <SiDevpost size={30} />
+            </a>
+          )}
+          {github && (
+            <a href={github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
+              <FaGithub size={30} />
+            </a>
+          )}
+          {youtube && (
+            <a href={youtube} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
+              <FaYoutube size={30} />
+            </a>
+          )}
+        </div>
+      )}
     </GlowingFrame>
   );
 } 
