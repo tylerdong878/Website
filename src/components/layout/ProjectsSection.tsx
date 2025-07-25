@@ -4,9 +4,9 @@ import { ProjectCard } from '../ui/ProjectCard';
 export default function ProjectsSection() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* ManImTired */}
+      {/* Marine Radar Scanner */}
       <ProjectCard
-        image="/projects/"
+        image="/projects/marine-radar-scanner.gif"
         title="Marine Radar Scanner"
         description="Radar scanner with live object detection."
         github="https://github.com/tylerdong878/Marine-Radar-Scanner"
@@ -20,6 +20,13 @@ export default function ProjectsSection() {
         devpost="https://devpost.com/software/manimtired"
         github="https://github.com/Tetraslam/manimtired"
         youtube="https://www.youtube.com/watch?v=TYJ02Z1lQR0"
+      />
+      <ProjectCard
+        image="/projects/polarglide.jpg"
+        title="Polar Glide"
+        description="Joystick controlled marble maze game."
+        website="https://sites.google.com/view/funlabsprojectarcticsea/home"
+        github="https://github.com/tylerdong878/Polar-Glide"
       />
       {/* NBA Player Consistency Analyzer */}
       <ProjectCard
