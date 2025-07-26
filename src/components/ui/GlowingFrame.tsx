@@ -27,21 +27,21 @@ export default function GlowingFrame({ children, className = '', px = 'px-8', py
         <>
           {/* Gradient glow overlay */}
           <div 
-            className="absolute inset-0 rounded-2xl opacity-45"
+            className="absolute inset-0 rounded-2xl opacity-25"
             style={{
               background: 'linear-gradient(-45deg,rgb(47, 186, 255) 0%, #0088cc 50%, #ff00ff 100%)',
-              filter: 'blur(12px)',
-              transform: 'scale(1.03)',
+              filter: 'blur(8px)',
+              transform: 'scale(1.01, 1.01)',
               zIndex: -1
             }}
           />
           {/* Additional glow layers */}
           <div 
-            className="absolute inset-0 rounded-2xl opacity-30"
+            className="absolute inset-0 rounded-2xl opacity-15"
             style={{
               background: 'linear-gradient(-45deg,rgb(47, 186, 255) 0%, #0088cc 50%, #ff00ff 100%)',
-              filter: 'blur(18px)',
-              transform: 'scale(1.06)',
+              filter: 'blur(12px)',
+              transform: 'scale(1.02, 1.02)',
               zIndex: -2
             }}
           />
