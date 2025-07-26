@@ -8,7 +8,7 @@ import ContactLinks from '@/components/pages/ContactLinks';
 
 export default function ContactPage() {
   return (
-    <div className="relative min-h-screen bg-black overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-cyber-bg via-cyber-dark to-cyber-darker relative overflow-hidden">
       <MatrixBackground />
       <FloatingBackground />
       <HexGrid />
