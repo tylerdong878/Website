@@ -21,8 +21,8 @@ export default function ResumePage() {
             </a>
           </div>
         </header>
-        <GlowingFrame className="w-full max-w-5xl h-[200vh] flex items-center justify-center mt-16">
-          <div className="w-full h-full px-4 py-8 text-white">
+        <GlowingFrame className="w-full max-w-5xl mt-16">
+          <div className="w-full px-4 py-8 text-white">
             <div className="max-w-4xl mx-auto">
               {/* Header */}
               <div className="text-center mb-6">

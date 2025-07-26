@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
 import GlowingFrame from '@/components/ui/GlowingFrame'
 
 interface NavLinkProps {
@@ -42,6 +43,7 @@ const NavLink = ({ href, children, isActive }: NavLinkProps) => {
 
 export default function Navigation() {
   const pathname = usePathname()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-cyber-bg/90 backdrop-blur-sm border-b border-blue-500">
@@ -59,7 +61,7 @@ export default function Navigation() {
             Tyler Dong Portfolio
           </motion.div>
 
-          {/* Right side - Navigation buttons and Play button */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
             <NavLink href="/" isActive={pathname === '/'}>
               HOME
@@ -107,15 +109,84 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <motion.button 
-            className="md:hidden text-cyber-blue-glow"
+            className="md:hidden text-blue-400 hover:text-blue-300 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </motion.button>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="md:hidden bg-cyber-bg/98 backdrop-blur-lg border-t border-blue-500/30"
+            >
+              <div className="px-4 py-4 space-y-2">
+                <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                  <motion.div
+                    className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
+                      pathname === '/' 
+                        ? 'text-blue-400 bg-blue-500/10 border border-blue-500/30' 
+                        : 'text-blue-400 hover:text-blue-300 hover:bg-blue-500/10'
+                    }`}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    HOME
+                  </motion.div>
+                </Link>
+                <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>
+                  <motion.div
+                    className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
+                      pathname === '/projects' 
+                        ? 'text-blue-400 bg-blue-500/10 border border-blue-500/30' 
+                        : 'text-blue-400 hover:text-blue-300 hover:bg-blue-500/10'
+                    }`}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    PROJECTS
+                  </motion.div>
+                </Link>
+                <Link href="/resume" onClick={() => setIsMobileMenuOpen(false)}>
+                  <motion.div
+                    className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
+                      pathname === '/resume' 
+                        ? 'text-blue-400 bg-blue-500/10 border border-blue-500/30' 
+                        : 'text-blue-400 hover:text-blue-300 hover:bg-blue-500/10'
+                    }`}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    RESUME
+                  </motion.div>
+                </Link>
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  <motion.div
+                    className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
+                      pathname === '/contact' 
+                        ? 'text-blue-400 bg-blue-500/10 border border-blue-500/30' 
+                        : 'text-blue-400 hover:text-blue-300 hover:bg-blue-500/10'
+                    }`}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    CONTACT
+                  </motion.div>
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   )
