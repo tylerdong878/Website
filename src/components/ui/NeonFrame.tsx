@@ -40,20 +40,20 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
         {/* Top Second Frame 1*/}
         <polyline
           points="157.23607 50, 177.23607,30 272.76393,30 292.76393,50"
-          stroke="#00fff7"
+          stroke="#ff00ff"
           strokeWidth="1.5"
           fill="none"
-          filter="url(#neon-blue)"
+          filter="url(#neon-pink)"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         {/* Top Second Frame 2*/}
         <polyline
           points="307.23607,50 327.23607,30 447.76393,30 467.76393,50"
-          stroke="#00fff7"
+          stroke="#ff00ff"
           strokeWidth="1.5"
           fill="none"
-          filter="url(#neon-blue)"
+          filter="url(#neon-pink)"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -73,7 +73,7 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
           y1="50"
           x2="600"
           y2="50"
-          stroke="#00fff7"
+          stroke="#ff00ff"
           strokeWidth="1.5"
           strokeLinecap="round"
         />
@@ -151,11 +151,71 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
         />
         {/* left middle accent */}
         <polyline
-          points="125,200 125,182.23607 202.23607,105 302.23607,105 317.23607,90"
+          points="130,255 130,230 125,225 125,182.23607 202.23607,105 302.23607,105 317.23607,90"
           stroke="#00fff7"
           strokeWidth="1.5"
           fill="none"
+          filter="url(#neon-blue)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* left bottom accent */}
+        <polyline
+          points="135,255 135,227.76393 130,222.76393 130,184.47214 204.47214,110 304.47214,110 329.47214,85 315,85"
+          stroke="#ff00ff"
+          strokeWidth="1.5"
+          fill="none"
           filter="url(#neon-pink)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Lower left Top accent */}
+        <polyline
+          points="130,287.76393 120,297.76393 120,327.23607 125,332.23607 125,425"
+          stroke="#00fff7"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-blue)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Lower left Middle accent */}
+        <polyline
+          points="130,270 130,320 125,325 125,300 130,295"
+          stroke="#00fff7"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-blue)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Lower left Bottom accent */}
+        <polyline
+          points="135,270 135,322.23607 130,327.23607 130,425"
+          stroke="#ff00ff"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-pink)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Bottom left Top accent */}
+        <polyline
+          points="140,435 160,455 235,455 255,435"
+          stroke="#ff00ff"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-pink)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Bottom left Bottom accent */}
+        <polyline
+          points="137.76393,440 157.76393,460 237.23607,460 257.23607,440"
+          stroke="#00fff7"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-blue)"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
