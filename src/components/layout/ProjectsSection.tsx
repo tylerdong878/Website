@@ -3,7 +3,7 @@ import { ProjectCard } from '../ui/ProjectCard';
 
 export default function ProjectsSection() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch auto-rows-fr">
       {/* Marine Radar Scanner */}
       <ProjectCard
         image="/projects/marine-radar-scanner.gif"
@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       />
       {/* ManImTired */}
       <ProjectCard
-        image="/projects/manimtired.png"
+        image="/projects/manimtired.gif"
         title="ManImTired"
         description="Generates 3Blue1Brown style educational videos."
         notes={["Winner at Steast Hackathon 2025."]}

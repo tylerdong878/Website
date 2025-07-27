@@ -82,8 +82,8 @@ export default function ResumePage() {
                       </div>
                     </div>
                     <ul className="list-disc list-inside mt-2 text-white/80 text-sm space-y-1 ml-4">
-                      <li>Mentored 70+ students in core computer science topics including binary/hexadecimal systems, Boolean logic and circuit design, graph theory and traversal algorithms, sorting algorithm analysis, and computational complexity (Big O notation)</li>
-                      <li>Guided students through discrete mathematics concepts such as combinatorics and permutations, probability theory (conditional probability, Bayes&apos; theorem, expectation, variance), set theory operations, and rigorous mathematical proof techniques</li>
+                      <li>Mentor 70+ students in core computer science topics including binary/hexadecimal systems, Boolean logic and circuit design, graph theory and traversal algorithms, sorting algorithm analysis, and computational complexity (Big O notation)</li>
+                      <li>Guide students through discrete mathematics concepts such as combinatorics and permutations, probability theory (conditional probability, Bayes&apos; theorem, expectation, variance), set theory operations, and rigorous mathematical proof techniques</li>
                     </ul>
                   </div>
                   
