@@ -131,7 +131,7 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
         <text
           x="220"
           y="75"
-          fill="#00fff7"
+          fill="#ffffff"
           fontSize="20"
           fontFamily="Orbitron, monospace"
           textAnchor="middle" // or "middle", "end" for alignment
@@ -212,6 +212,46 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
         {/* Bottom left Bottom accent */}
         <polyline
           points="137.76393,440 157.76393,460 237.23607,460 257.23607,440"
+          stroke="#00fff7"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-blue)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Bottom Middle Top accent */}
+        <polyline
+          points="280,435 300,455 445,455 525,375 565,375 635,305 635,250 625,240"
+          stroke="#ff00ff"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-pink)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Bottom Middle Bottom accent */}
+        <polyline
+          points="277.76393,440 297.76393,460 447.23607,460 527.23607,380 567.23607,380 640,307.23593 640,247.76393 630,237.76393"
+          stroke="#00fff7"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-blue)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Right Middle accent */}
+        <polyline
+          points="625,200 635,190 635,150 625,140 625,170 635,180"
+          stroke="#ff00ff"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-pink)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Right Bottom accent */}
+        <polyline
+          points="630,202.76393 640,192.76393 640,147.76393 620,127.76393 620,172.23607 630,182.23607"
           stroke="#00fff7"
           strokeWidth="1.5"
           fill="none"
