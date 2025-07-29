@@ -16,7 +16,6 @@ export default function ContactPage() {
         <NeonFrame>
           <div className="grid md:grid-cols-2 gap-12">
             <AboutSection />
-            <ContactLinks />
           </div>
         </NeonFrame>
       </main>
