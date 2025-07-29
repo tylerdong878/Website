@@ -12,7 +12,7 @@ export default function AboutSection() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.h2 
-        className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-2 text-white"
+        className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-2 text-blue-600"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
@@ -20,7 +20,7 @@ export default function AboutSection() {
         About Me
       </motion.h2>
       <motion.p 
-        className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-cyber-blue-atmospheric max-w-sm sm:max-w-2xl md:max-w-3xl mx-auto px-1 sm:px-4 leading-relaxed"
+        className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-400 max-w-sm sm:max-w-2xl md:max-w-3xl mx-auto px-1 sm:px-4 leading-relaxed"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}

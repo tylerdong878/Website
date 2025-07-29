@@ -13,7 +13,7 @@ export default function ContactPage() {
       <FloatingBackground />
       <HexGrid />
       <main className="w-full max-w-5xl mx-auto py-8 px-4 relative z-10 flex flex-col items-center justify-start min-h-screen">
-        <NeonFrame className="w-full max-w-5xl mt-0">
+        <NeonFrame className="w-full max-w-5xl -mt-7.5">
           <div className="flex flex-col gap-8 p-8">
             <AboutSection />
             <ContactLinks />
