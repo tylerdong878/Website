@@ -9,7 +9,7 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
   return (
     <div className={`relative w-full h-full flex items-center justify-center aspect-square ${className}`}>
               <svg
-          viewBox="0 0 800 800"
+          viewBox="105 10 550 527.23607"
           width="100%"
           height="100%"
           className="absolute inset-0 z-0"

@@ -12,10 +12,11 @@ export default function ContactPage() {
       <MatrixBackground />
       <FloatingBackground />
       <HexGrid />
-      <main className="w-full max-w-6xl mx-auto py-16 px-4 relative z-10 flex flex-col items-center">
-        <NeonFrame>
-          <div className="grid md:grid-cols-2 gap-12">
+      <main className="w-full max-w-5xl mx-auto py-8 px-4 relative z-10 flex flex-col items-center justify-start min-h-screen">
+        <NeonFrame className="w-full max-w-5xl mt-0">
+          <div className="flex flex-col gap-8 p-8">
             <AboutSection />
+            <ContactLinks />
           </div>
         </NeonFrame>
       </main>
