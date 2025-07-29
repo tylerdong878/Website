@@ -6,7 +6,7 @@ const links = [
   { href: 'https://www.linkedin.com/in/tylerdong/', label: 'LinkedIn', icon: <FaLinkedin size={48} className="text-blue-500 drop-shadow-[0_0_4px_#38bdf8cc] hover:drop-shadow-[0_0_5px_#f472b6cc] transition-shadow" /> },
   { href: 'https://x.com/tyler878_', label: 'X', icon: <FaTwitter size={48} className="text-blue-500 drop-shadow-[0_0_4px_#38bdf8cc] hover:drop-shadow-[0_0_5px_#f472b6cc] transition-shadow" /> },
   { href: 'https://www.instagram.com/tylerdong_/', label: 'Instagram', icon: <FaInstagram size={48} className="text-blue-500 drop-shadow-[0_0_4px_#38bdf8cc] hover:drop-shadow-[0_0_5px_#f472b6cc] transition-shadow" /> },
-  { href: 'tylerdong878@gmail.com', label: 'Email', icon: <FaEnvelope size={48} className="text-blue-500 drop-shadow-[0_0_4px_#38bdf8cc] hover:drop-shadow-[0_0_5px_#f472b6cc] transition-shadow" /> },
+  { href: 'mailto:tylerdong878@gmail.com', label: 'Email', icon: <FaEnvelope size={48} className="text-blue-500 drop-shadow-[0_0_4px_#38bdf8cc] hover:drop-shadow-[0_0_5px_#f472b6cc] transition-shadow" /> },
   { href: 'https://github.com/tylerdong878', label: 'GitHub', icon: <FaGithub size={48} className="text-blue-500 drop-shadow-[0_0_4px_#38bdf8cc] hover:drop-shadow-[0_0_5px_#f472b6cc] transition-shadow" /> },
   { href: 'https://devpost.com/dong-ty', label: 'Devpost', icon: <SiDevpost size={48} className="text-blue-500 drop-shadow-[0_0_4px_#38bdf8cc] hover:drop-shadow-[0_0_5px_#f472b6cc] transition-shadow" /> },
 ];
