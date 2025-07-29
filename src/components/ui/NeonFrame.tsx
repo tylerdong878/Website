@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface NeonFrameProps {
   children?: React.ReactNode;
@@ -8,7 +11,7 @@ interface NeonFrameProps {
 export function NeonFrame({ children, className = '' }: NeonFrameProps) {
   return (
     <div className={`relative w-full h-full flex items-center justify-center aspect-square ${className}`}>
-              <svg
+              <motion.svg
           viewBox="105 10 550 527.23607"
           width="100%"
           height="100%"
@@ -18,6 +21,9 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
           }}
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid meet"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
         <defs>
           <filter id="neon-blue" x="-200%" y="-200%" width="500%" height="500%">
@@ -26,11 +32,8 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
               <feMergeNode in="coloredBlur"/>
               <feMergeNode in="SourceGraphic"/>
             </feMerge>
-            <feDropShadow dx="0" dy="0" stdDeviation="1.5" floodColor="#0088cc" floodOpacity="0.6" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0088cc" floodOpacity="0.4" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#0088cc" floodOpacity="0.3" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="8" floodColor="#0088cc" floodOpacity="0.2" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="12" floodColor="#0088cc" floodOpacity="0.1" mode="screen"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="3.5" floodColor="#0088cc" floodOpacity="0.8" mode="screen"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="9" floodColor="#0088cc" floodOpacity="0.6" mode="screen"/>
           </filter>
           <filter id="neon-pink" x="-200%" y="-200%" width="500%" height="500%">
             <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
@@ -38,11 +41,8 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
               <feMergeNode in="coloredBlur"/>
               <feMergeNode in="SourceGraphic"/>
             </feMerge>
-            <feDropShadow dx="0" dy="0" stdDeviation="1.5" floodColor="#e80dfb" floodOpacity="0.6" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#e80dfb" floodOpacity="0.4" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#e80dfb" floodOpacity="0.3" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="8" floodColor="#e80dfb" floodOpacity="0.2" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="12" floodColor="#e80dfb" floodOpacity="0.1" mode="screen"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="3.5" floodColor="#e80dfb" floodOpacity="0.8" mode="screen"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="9" floodColor="#e80dfb" floodOpacity="0.6" mode="screen"/>
           </filter>
 
         </defs>
@@ -108,60 +108,16 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        {/* Top Diagnal 1 - Glow Layer */}
-        <line
-          x1="185"
-          y1="35"
-          x2="200"
-          y2="50"
+        {/* Top Diagnal Lines - Glow Layer (Combined) */}
+        <polyline
+          points="185,35 200,50 205,35 220,50 225,35 240,50 245,35 260,50 265,35 280,50"
           stroke="#0088cc"
           strokeWidth="1.5"
-          strokeLinecap="round"
+          fill="none"
           filter="url(#neon-blue)"
-        />
-        {/* Top Diagnal 2 - Glow Layer */}
-        <line
-          x1="205"
-          y1="35"
-          x2="220"
-          y2="50"
-          stroke="#0088cc"
-          strokeWidth="1.5"
           strokeLinecap="round"
-          filter="url(#neon-blue)"
-        />
-        {/* Top Diagnal 3 - Glow Layer */}
-        <line
-          x1="225"
-          y1="35"
-          x2="240"
-          y2="50"
-          stroke="#0088cc"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-blue)"
-        />
-        {/* Top Diagnal 4 - Glow Layer */}
-        <line
-          x1="245"
-          y1="35"
-          x2="260"
-          y2="50"
-          stroke="#0088cc"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-blue)"
-        />
-        {/* Top Diagnal 5 - Glow Layer */}
-        <line
-          x1="265"
-          y1="35"
-          x2="280"
-          y2="50"
-          stroke="#0088cc"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-blue)"
+          strokeLinejoin="round"
+          strokeDasharray="21,16"
         />
         {/* left middle accent - Glow Layer */}
         <polyline
@@ -286,91 +242,28 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
         >
           CONNECT
         </text>
-        {/* Bottom Diagnal 1 - Glow Layer */}
-        <line
-          x1="447.23607"
-          y1="460"
-          x2="372.23607"
-          y2="535"
-          stroke="#0088cc"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-blue)"
-        />
-        {/* Bottom Diagnal 2 - Glow Layer */}
-        <line
-          x1="487.23607"
-          y1="427.23607"
-          x2="377.23607"
-          y2="537.23607"
-          stroke="#0088cc"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-blue)"
-        />
-        {/* Bottom Diagnal 3 - Glow Layer */}
-        <line
-          x1="582.23607"
-          y1="425"
-          x2="472.23607"
-          y2="535"
-          stroke="#0088cc"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-blue)"
-        />
-        {/* Bottom Diagnal 4 - Glow Layer */}
-        <line
-          x1="587.23607"
-          y1="427.23607"
-          x2="477.23607"
-          y2="537.23607"
-          stroke="#0088cc"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-blue)"
-        />
-        {/* Bottom Diagnal 5 - Glow Layer */}
-        <line
-          x1="627.23607"
-          y1="330"
-          x2="527.23607"
-          y2="430"
-          stroke="#e80dfb"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-pink)"
-        />
-        {/* Bottom Diagnal 6 - Glow Layer */}
-        <line
-          x1="632.23607"
-          y1="332.23607"
-          x2="532.23607"
-          y2="432.23607"
-          stroke="#e80dfb"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          filter="url(#neon-pink)"
-        />
-        {/* Bottom Diagnal 7 - Glow Layer */}
+        {/* Bottom Diagnal 1-4 - Glow Layer (Combined) */}
         <polyline
-          points="627.23607,355 587.23607,395 587.23607,420"
+          points="447.23607,460 372.23607,535     487.23607,427.23607 377.23607,537.23607     582.23607,425 472.23607,535     587.23607,427.23607 477.23607,537.23607"
+          stroke="#0088cc"
+          strokeWidth="1.5"
+          fill="none"
+          filter="url(#neon-blue)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray="106,157.5,155.75,233.6,155.75,157.5,155.75"
+        />
+        {/* Bottom Diagnal 5-8 - Glow Layer (Combined) */}
+        <polyline
+          points="627.23607,330 527.23607,430     632.23607,332.23607 532.23607,432.23607     627.23607,355 587.23607,395 587.23607,420     632.23607,357.23607 592.23607,397.23607 592.23607,420"
+
           stroke="#e80dfb"
           strokeWidth="1.5"
           fill="none"
           filter="url(#neon-pink)"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
-        {/* Bottom Diagnal 8 - Glow Layer */}
-        <polyline
-          points="632.23607,357.23607 592.23607,397.23607 592.23607,420"
-          stroke="#e80dfb"
-          strokeWidth="1.5"
-          fill="none"
-          filter="url(#neon-pink)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeDasharray="141.5,143.5,141.5,122.25,81.5,77.25,81.5"
         />
 
         {/* ALL WHITE LINES AFTER GLOWS */}
@@ -428,55 +321,15 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        {/* Top Diagnal 1 - White Line */}
-        <line
-          x1="185"
-          y1="35"
-          x2="200"
-          y2="50"
+        {/* Top Diagnal Lines - White Line (Combined) */}
+        <polyline
+          points="185,35 200,50 205,35 220,50 225,35 240,50 245,35 260,50 265,35 280,50"
           stroke="white"
           strokeWidth="1.5"
+          fill="none"
           strokeLinecap="round"
-        />
-        {/* Top Diagnal 2 - White Line */}
-        <line
-          x1="205"
-          y1="35"
-          x2="220"
-          y2="50"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Top Diagnal 3 - White Line */}
-        <line
-          x1="225"
-          y1="35"
-          x2="240"
-          y2="50"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Top Diagnal 4 - White Line */}
-        <line
-          x1="245"
-          y1="35"
-          x2="260"
-          y2="50"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Top Diagnal 5 - White Line */}
-        <line
-          x1="265"
-          y1="35"
-          x2="280"
-          y2="50"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray="21,16"
         />
         {/* left middle accent - White Line */}
         <polyline
@@ -577,83 +430,25 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        {/* Bottom Diagnal 1 - White Line */}
-        <line
-          x1="447.23607"
-          y1="460"
-          x2="372.23607"
-          y2="535"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Bottom Diagnal 2 - White Line */}
-        <line
-          x1="487.23607"
-          y1="427.23607"
-          x2="377.23607"
-          y2="537.23607"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Bottom Diagnal 3 - White Line */}
-        <line
-          x1="582.23607"
-          y1="425"
-          x2="472.23607"
-          y2="535"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Bottom Diagnal 4 - White Line */}
-        <line
-          x1="587.23607"
-          y1="427.23607"
-          x2="477.23607"
-          y2="537.23607"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Bottom Diagnal 5 - White Line */}
-        <line
-          x1="627.23607"
-          y1="330"
-          x2="527.23607"
-          y2="430"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Bottom Diagnal 6 - White Line */}
-        <line
-          x1="632.23607"
-          y1="332.23607"
-          x2="532.23607"
-          y2="432.23607"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        {/* Bottom Diagnal 7 - White Line */}
+        {/* Bottom Diagnal 1-4 - White Line (Combined) */}
         <polyline
-          points="627.23607,355 587.23607,395 587.23607,420"
+          points="447.23607,460 372.23607,535     487.23607,427.23607 377.23607,537.23607     582.23607,425 472.23607,535     587.23607,427.23607 477.23607,537.23607"
           stroke="white"
           strokeWidth="1.5"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeDasharray="106,157.5,155.75,233.6,155.75,157.5,155.75"
         />
-        {/* Bottom Diagnal 8 - White Line */}
+        {/* Bottom Diagnal 5-8 - White Line (Combined) */}
         <polyline
-          points="632.23607,357.23607 592.23607,397.23607 592.23607,420"
+          points="627.23607,330 527.23607,430     632.23607,332.23607 532.23607,432.23607     627.23607,355 587.23607,395 587.23607,420     632.23607,357.23607 592.23607,397.23607 592.23607,420"
           stroke="white"
           strokeWidth="1.5"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeDasharray="141.5,143.5,141.5,122.25,81.5,77.25,81.5"
         />
 
         {/* Connect - White Line */}
@@ -668,7 +463,7 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
         >
           CONNECT
         </text>
-      </svg>
+      </motion.svg>
       <div className="relative z-10 w-11/12 h-11/12 flex items-center justify-center">
         {children}
       </div>

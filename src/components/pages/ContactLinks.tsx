@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaGithub } from 'react-icons/fa';
 import { SiDevpost } from 'react-icons/si';
 
@@ -13,18 +16,32 @@ const links = [
 
 export default function ContactLinks() {
   return (
-    <section className="grid grid-cols-4 sm:flex sm:flex-wrap gap-3 sm:gap-4 md:gap-6 justify-center items-center mt-4 max-w-xs sm:max-w-none">
+    <motion.section 
+      className="grid grid-cols-4 sm:flex sm:flex-wrap gap-3 sm:gap-4 md:gap-6 justify-center items-center mt-4 max-w-xs sm:max-w-none"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       {links.map((link, index) => (
-        <a
+        <motion.a
           key={link.label}
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
           className="group hover:scale-105 transition-transform flex justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ 
+            duration: 0.4, 
+            delay: 0.6 + (index * 0.1), 
+            ease: "easeOut" 
+          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           {link.icon}
-        </a>
+        </motion.a>
       ))}
-    </section>
+    </motion.section>
   );
 } 
