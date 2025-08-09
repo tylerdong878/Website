@@ -49,7 +49,6 @@ export default function ResumePage() {
                     </div>
                     <div className="text-right text-white/70 text-sm">
                       <p>Sep 2024 - Present</p>
-                      <p>Expected May 2028</p>
                     </div>
                   </div>
                 </div>
@@ -61,7 +60,7 @@ export default function ResumePage() {
                 <div className="space-y-2">
                   <p className="text-white/80 text-sm"><span className="text-blue-400 font-semibold">Programming Languages:</span> Python, Java, C++, C#, HTML, JavaScript, TypeScript, CSS, MATLAB, Racket</p>
                   <p className="text-white/80 text-sm"><span className="text-blue-400 font-semibold">Frameworks & Libraries:</span> PyTorch, ML-Agents, NumPy, pandas, PyMuPDF, OpenCV, Next.js, React, Tailwind CSS, Flask, JUnit</p>
-                  <p className="text-white/80 text-sm"><span className="text-blue-400 font-semibold">Development Tools & Platforms:</span> Git, Supabase, Firebase, Visual Studio Code, InteliJ, Windsurf</p>
+                  <p className="text-white/80 text-sm"><span className="text-blue-400 font-semibold">Development Tools & Platforms:</span> Git, Supabase, Firebase, Visual Studio Code, InteliJ</p>
                   <p className="text-white/80 text-sm"><span className="text-blue-400 font-semibold">Electronics & Design Engineering:</span> Arduino, Solidworks, AutoCAD, OnShape, Soldering, Tinkercad</p>
                 </div>
               </div>
@@ -82,7 +81,7 @@ export default function ResumePage() {
                       </div>
                     </div>
                     <ul className="list-disc list-inside mt-2 text-white/80 text-sm space-y-1 ml-4">
-                      <li>Mentor 70+ students in core computer science topics including binary/hexadecimal systems, Boolean logic and circuit design, graph theory and traversal algorithms, sorting algorithm analysis, and computational complexity (Big O notation)</li>
+                      <li>Support and grade 70+ students in core computer science topics including binary/hexadecimal systems, Boolean logic and circuit design, graph theory and traversal algorithms, sorting algorithm analysis, and computational complexity (Big O notation)</li>
                       <li>Guide students through discrete mathematics concepts such as combinatorics and permutations, probability theory (conditional probability, Bayes&apos; theorem, expectation, variance), set theory operations, and rigorous mathematical proof techniques</li>
                     </ul>
                   </div>
@@ -150,7 +149,7 @@ export default function ResumePage() {
                     <div className="flex justify-between items-start">
                       <div>
                         <p className="text-white/90 font-semibold">NBA Player Consistency Analyzer <a href="https://github.com/tylerdong878/Sports-Information" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-purple-400 transition-colors">[GitHub]</a></p>
-                        <p className="text-white/70 text-sm">Python, HTML, Javascript, CSS, Flask, nba_api</p>
+                        <p className="text-white/70 text-sm">Python, HTML, JavaScript, CSS, Flask, nba_api</p>
                       </div>
                       <div className="text-right text-white/70 text-sm">
                         <p>Mar-Apr 2025</p>
