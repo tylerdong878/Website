@@ -33,8 +33,7 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
               <feMergeNode in="SourceGraphic"/>
             </feMerge>
             <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#0088cc" floodOpacity="1" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#0088cc" floodOpacity="0.8" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="7" floodColor="#0088cc" floodOpacity="0.6" mode="screen"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#0088cc" floodOpacity="0.8" mode="screen"/>
           </filter>
           <filter id="neon-pink" x="-200%" y="-200%" width="500%" height="500%">
             <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
@@ -43,8 +42,7 @@ export function NeonFrame({ children, className = '' }: NeonFrameProps) {
               <feMergeNode in="SourceGraphic"/>
             </feMerge>
             <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#e80dfb" floodOpacity="1" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#e80dfb" floodOpacity="0.8" mode="screen"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="7" floodColor="#e80dfb" floodOpacity="0.6" mode="screen"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#e80dfb" floodOpacity="0.8" mode="screen"/>
           </filter>
 
         </defs>
