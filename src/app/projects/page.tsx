@@ -10,7 +10,6 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-gradient-to-br from-cyber-bg via-cyber-dark to-cyber-darker relative overflow-hidden">
       {/* Background layers */}
       <MatrixBackground />
-      <FloatingBackground />
       <HexGrid />
       {/* Main content */}
       <main className="w-full max-w-6xl mx-auto py-16 px-4 relative z-10">

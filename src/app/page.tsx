@@ -10,7 +10,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-cyber-bg via-cyber-dark to-cyber-darker relative overflow-hidden">
       {/* Background layers */}
       <MatrixBackground />
-      <FloatingBackground />
+      
       <HexGrid />
 
       {/* Main content */}

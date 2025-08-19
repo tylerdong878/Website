@@ -10,7 +10,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyber-bg via-cyber-dark to-cyber-darker relative overflow-hidden">
       <MatrixBackground />
-      <FloatingBackground />
       <HexGrid />
       <main className="w-full max-w-5xl mx-auto py-8 px-4 relative z-10 flex flex-col items-center justify-start min-h-screen">
         <NeonFrame className="w-full max-w-5xl -mt-7.5">

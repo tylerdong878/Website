@@ -10,7 +10,6 @@ export default function ResumePage() {
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-cyber-bg via-cyber-dark to-cyber-darker overflow-hidden">
       <MatrixBackground />
-      <FloatingBackground />
       <HexGrid />
       <main className="w-full max-w-6xl mx-auto py-16 px-4 relative z-10 flex flex-col items-center">
         <header className="text-center space-y-3">
