@@ -25,7 +25,7 @@ export default function AboutSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
       >
-        Hi, I&apos;m Tyler. I study Computer Engineering and Computer Science at Northeastern University.
+        Hi, I&apos;m Tyler. I&apos;m currently studying Computer Engineering and Computer Science at Northeastern University.
         I am interested in a wide range of topics in the software and hardware space.
         
         In my free time, I stay active with tennis, soccer, and pickleball, enjoy video editing and graphic design, and relax with gaming.
