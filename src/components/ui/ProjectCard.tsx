@@ -26,6 +26,7 @@ export function ProjectCard({ image, title, description, notes, devpost, github,
           height={225}
           className="w-full h-full object-cover rounded-2xl"
           loading="lazy"
+          unoptimized={image.endsWith('.gif')}
         />
       </GlowingFrame>
       <div className="flex flex-col flex-grow">
