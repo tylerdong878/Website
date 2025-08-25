@@ -9,13 +9,14 @@ interface ProjectCardProps {
   title: string;
   description: string;
   notes?: string[];
+  techStack?: string[];
   devpost?: string;
   github?: string;
   youtube?: string;
   website?: string;
 }
 
-export function ProjectCard({ image, title, description, notes, devpost, github, youtube, website }: ProjectCardProps) {
+export function ProjectCard({ image, title, description, notes, techStack, devpost, github, youtube, website }: ProjectCardProps) {
   return (
     <GlowingFrame glow={false} className="w-full h-full p-4 flex flex-col rounded-xl relative z-10" px="px-5.5" py="py-4">
       <GlowingFrame className="mb-4 w-full h-40 overflow-hidden aspect-[16/9] flex-shrink-0" px="px-0" py="py-0">
@@ -32,6 +33,20 @@ export function ProjectCard({ image, title, description, notes, devpost, github,
       <div className="flex flex-col flex-grow">
         <h3 className="text-2xl font-bold text-purple-500 mb-2 font-orbitron">{title}</h3>
         <p className="text-base text-purple-300 mb-2 flex-grow">{description}</p>
+        {techStack && techStack.length > 0 && (
+          <div className="mb-3">
+            <div className="flex flex-wrap gap-2">
+              {techStack.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="px-2 py-1 text-xs font-medium bg-cyber-dark border-2 border-purple-500/50 text-purple-300 rounded-md hover:bg-purple-500/20 transition-colors"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
         {notes && notes.length > 0 && (
           <ul className="text-base text-purple-400 mt-2 list-disc list-inside">
             {notes.map((note, idx) => (
