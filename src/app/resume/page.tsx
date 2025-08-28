@@ -76,7 +76,7 @@ export default function ResumePage() {
                       </div>
                       <div className="text-right text-white/70 text-sm">
                         <p>Remote</p>
-                        <p>Jun 2025 - Aug 2025</p>
+                        <p>Jun 2025 - Present</p>
                       </div>
                     </div>
                     <ul className="list-disc list-inside mt-2 text-white/80 text-sm space-y-1 ml-4">
