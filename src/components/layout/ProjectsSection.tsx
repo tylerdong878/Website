@@ -5,6 +5,15 @@ export default function ProjectsSection() {
   return (
     
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch auto-rows-fr">
+      {/* FIREBALL */}
+      <ProjectCard
+        image="/projects/fireball.png"
+        title="FIREBALL"
+        description="Gesture-controlled wizard dueling game."
+        techStack={["Mediapipe", "React", "Shadcn UI", "TypeScript"]}
+        devpost="https://devpost.com/software/fireball-7g2zl9"
+        github="https://github.com/Tetraslam/hackharvard2025"
+      />
       {/* SnakeRL */}
       <ProjectCard
         image="/projects/snakerl.gif"
