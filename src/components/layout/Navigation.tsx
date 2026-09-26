@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import GlowingFrame from '@/components/ui/GlowingFrame'
 
 interface NavLinkProps {
   href: string
@@ -69,8 +68,8 @@ export default function Navigation() {
             <NavLink href="/projects" isActive={pathname === '/projects'}>
               PROJECTS
             </NavLink>
-            <NavLink href="/resume" isActive={pathname === '/resume'}>
-              RESUME
+            <NavLink href="/experience" isActive={pathname === '/experience'}>
+              EXPERIENCE
             </NavLink>
             <NavLink href="/contact" isActive={pathname === '/contact'}>
               CONTACT
@@ -157,17 +156,17 @@ export default function Navigation() {
                     PROJECTS
                   </motion.div>
                 </Link>
-                <Link href="/resume" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/experience" onClick={() => setIsMobileMenuOpen(false)}>
                   <motion.div
                     className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
-                      pathname === '/resume' 
+                      pathname === '/experience' 
                         ? 'text-blue-400 bg-blue-500/10 border border-blue-500/30' 
                         : 'text-blue-400 hover:text-blue-300 hover:bg-blue-500/10'
                     }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    RESUME
+                    EXPERIENCE
                   </motion.div>
                 </Link>
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>

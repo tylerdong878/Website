@@ -9,8 +9,8 @@ export default function ActionButtons() {
       <Link href="/projects">
         <Button name="PROJECTS" />
       </Link>
-      <Link href="/resume">
-        <Button name="RESUME" />
+      <Link href="/experience">
+        <Button name="EXPERIENCE" />
       </Link>
       <Link href="/contact">
         <Button name="CONTACT" />
