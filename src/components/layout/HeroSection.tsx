@@ -15,9 +15,9 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-3xl text-blue-500 mb-12 font-small"
+        className="text-3xl text-blue-500 mb-12 font-small max-w-4xl"
       >
-        Computer Engineering & Computer Science @ Northeastern University
+        CS + Computer Engineering at Northeastern University
       </motion.p>
 
       {/* Action Buttons */}

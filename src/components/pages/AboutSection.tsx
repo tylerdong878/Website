@@ -25,10 +25,9 @@ export default function AboutSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
       >
-        Hi, I&apos;m Tyler. I&apos;m currently studying Computer Engineering and Computer Science at Northeastern University.
-        I am interested in a wide range of topics in the software and hardware space.
-        
-        In my free time, I stay active with tennis, soccer, and pickleball, enjoy video editing and graphic design, and relax with gaming.
+        I&apos;m a dual CS and Computer Engineering student at Northeastern. I like building things that have to be fast and correct:
+        disk encryption at AWS, market data pipelines, and payments in a production app with 26k+ users.
+        Outside of code I play competitive Tetris, climb, play intramural tennis and pickleball, edit gaming montages, and reached top 103 globally in Pok&eacute;mon GO.
       </motion.p>
     </motion.section>
   );

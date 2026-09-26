@@ -5,7 +5,7 @@ import { FaGithub, FaYoutube, FaGlobe } from 'react-icons/fa';
 import { SiDevpost } from 'react-icons/si';
 
 interface ProjectCardProps {
-  image: string;
+  image?: string;
   title: string;
   description: string;
   notes?: string[];
@@ -20,15 +20,21 @@ export function ProjectCard({ image, title, description, notes, techStack, devpo
   return (
     <GlowingFrame glow={false} className="w-full h-full p-4 flex flex-col rounded-xl relative z-10" px="px-5.5" py="py-4">
       <GlowingFrame className="mb-4 w-full h-40 overflow-hidden aspect-[16/9] flex-shrink-0" px="px-0" py="py-0">
-        <Image
-          src={image}
-          alt={title}
-          width={400}
-          height={225}
-          className="w-full h-full object-cover rounded-2xl"
-          loading="lazy"
-          unoptimized={image.endsWith('.gif')}
-        />
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            width={400}
+            height={225}
+            className="w-full h-full object-cover rounded-2xl"
+            loading="lazy"
+            unoptimized={image.endsWith('.gif')}
+          />
+        ) : (
+          <div className="w-full h-full rounded-2xl bg-gradient-to-br from-cyber-dark to-purple-900/40 flex items-center justify-center">
+            <span className="text-2xl font-bold text-purple-400/70 font-orbitron text-center px-4">{title}</span>
+          </div>
+        )}
       </GlowingFrame>
       <div className="flex flex-col flex-grow">
         <h3 className="text-2xl font-bold text-purple-500 mb-2 font-orbitron">{title}</h3>
