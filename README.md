@@ -16,7 +16,7 @@ This project is a personal portfolio website that showcases Tyler's projects, sk
 
 ## Tech Stack
 
-- **Next.js 15** - React framework for production
+- **Next.js 16** - React framework for production
 - **React 19** - JavaScript library for building user interfaces
 - **TypeScript** - Type-safe JavaScript
 - **Framer Motion** - Animation library for React
