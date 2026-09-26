@@ -1,6 +1,5 @@
 import React from 'react';
 import MatrixBackground from '@/components/animations/MatrixBackground';
-import FloatingBackground from '@/components/animations/FloatingBackground';
 import HexGrid from '@/components/animations/HexGrid';
 import { NeonFrame } from '@/components/ui/NeonFrame';
 import AboutSection from '@/components/pages/AboutSection';

@@ -1,6 +1,5 @@
 import React from 'react';
 import MatrixBackground from '@/components/animations/MatrixBackground';
-import FloatingBackground from '@/components/animations/FloatingBackground';
 import HexGrid from '@/components/animations/HexGrid';
 import SaberText from '@/components/ui/SaberText';
 import ProjectsSection from '@/components/layout/ProjectsSection';
